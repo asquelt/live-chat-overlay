@@ -1,0 +1,82 @@
+{
+  "extName": {
+    "message": "Live Chat Overlay",
+    "description": "Extension name"
+  },
+  "extDesc": {
+    "message": "Restyle the YouTube/Restream popout chat so you can overlay it for livestreams",
+    "description": "Extension description"
+  },
+  "default_chat_user": {
+    "message": "Sample User",
+    "description": "example message author when overlay starts"
+  },
+  "default_chat_msg": {
+    "message": "this livestream is the best!",
+    "description": "example message text when overlay starts"
+  },
+  "settings_lecture": {
+    "message": "<p>Customize the colors of the Live Chat Overlay. Enter the <a target=\"_blank\" href=\"https://www.google.com/search?q=hex+color+picker\">hex codes</a> of the colors you'd like to use. Remember that full black #000 will be keyed out. You can delete a value to reset it to the default.</p><ul><li>Black: #000</li><li>Dark Grey: #222</li><li>White: #fff</li></ul>",
+    "description": "instructions on how to setup extension"
+  },
+  "settings_words": {
+    "message": "Highlight Words"
+  },
+  "settings_words_desc": {
+    "message": "Enter a list of comma-separated words that will be highlighted in the chat"
+  },
+  "settings_bgcolor": {
+    "message": "Background Color"
+  },
+  "settings_fgauthor": {
+    "message": "Author Name Color"
+  },
+  "settings_bgauthor": {
+    "message": "Author Background Color"
+  },
+  "settings_border": {
+    "message": "Author Avatar Border Color"
+  },
+  "settings_bgchat": {
+    "message": "Chat Message Background Color"
+  },
+  "settings_fgchat": {
+    "message": "Chat Message Text Color"
+  },
+  "settings_firstname": {
+    "message": "Show only first name"
+  },
+  "settings_font": {
+    "message": "Font"
+  },
+  "settings_advanced": {
+    "message": "Adjust these to make the comment text smaller or fit more lines of text. Sorry it's kind of hard to use."
+  },
+  "settings_scale": {
+    "message": "Active Comment Scale (e.g. 0.8)"
+  },
+  "settings_bottom": {
+    "message": "Active Comment Bottom Position"
+  },
+  "settings_bottom_desc": {
+    "message": "(set negative to move lower when scaled down, e.g. -2vh)"
+  },
+  "settings_height": {
+    "message": "Active Comment Height (default 30vh)"
+  },
+  "settings_width": {
+    "message": "Width Offset"
+  },
+  "settings_width_desc": {
+    "message": "(make text area wider when scaled down, e.g. 100)"
+  },
+  "settings_save": {
+    "message": "Save"
+  },
+  "CLEAR": {
+    "message": "CLEAR"
+  },
+  "new_member": {
+    "message": "NEW MEMBER!"
+  }
+}

@@ -1,3 +1,6 @@
+//FIXME
+console.log('Restream overlay here, healthy and ready');
+
 var showOnlyFirstName;
 
 var highlightWords = [];
@@ -14,65 +17,24 @@ $("body").unbind("click").on("click", "yt-live-chat-text-message-renderer,yt-liv
   var chatname = $(this).find("#author-name").text();
 
   if(showOnlyFirstName) {
-    chatname = chatname.replace(/ .*/,'');
+    chatname = chatname.replace(/ .*<FIXME>/,'');
   }
 
   var chatmessage = $(this).find("#message").html();
   var chatimg = $(this).find("#img").attr('src');
   chatimg = chatimg.replace("32", "128");
-  var chatdonation = $(this).find("#purchase-amount").html();
-  var chatmembership = $(this).find(".yt-live-chat-membership-item-renderer #header-subtext").html();
-  var chatsticker = $(this).find(".yt-live-chat-paid-sticker-renderer #img").attr("src");
-
-  // Donation amounts for stickers use a differnet id than regular superchats
-  if(chatsticker) {
-    chatdonation = $(this).find("#purchase-amount-chip").html();
-  }
-
-  var chatbadges = "";
-  if($(this).find("#chat-badges .yt-live-chat-author-badge-renderer img").length > 0) {
-    chatbadges = $(this).find("#chat-badges .yt-live-chat-author-badge-renderer img").parent().html();
-  }
 
   // Mark this comment as shown
   $(this).addClass("shown-comment");
 
-  var hasDonation = '';
-  if(chatdonation) {
-    hasDonation = '<div class="donation">' + chatdonation + '</div>';
-  }
-
-  var hasMembership = '';
-  if(chatmembership) {
-    hasMembership = '<div class="donation membership">' + chrome.i18n.getMessage('new_member') + '</div>';
-    chatmessage = chatmembership;
-  }
-
-  if(chatsticker) {
-    chatmessage = '<img src="'+chatsticker+'">';
-  }
-
   var backgroundColor = "";
   var textColor = "";
-  if(this.style.getPropertyValue('--yt-live-chat-paid-message-primary-color')) {
-    backgroundColor = "background-color: "+this.style.getPropertyValue('--yt-live-chat-paid-message-primary-color')+";";
-    textColor = "color: #111;";
-  }
-
-  // This doesn't work yet
-  if(this.style.getPropertyValue('--yt-live-chat-sponsor-color')) {
-    backgroundColor = "background-color: "+this.style.getPropertyValue('--yt-live-chat-sponsor-color')+";";
-    textColor = "color: #111;";
-  }
-
 
   $( "highlight-chat" ).removeClass("preview").append('<div class="hl-c-cont fadeout">'
      + '<div class="hl-name">' + chatname
-       + '<div class="hl-badges">' + chatbadges + '</div>'
      + '</div>'
      + '<div class="hl-message" style="'+backgroundColor+' '+textColor+'">' + chatmessage + '</div>'
      + '<div class="hl-img"><img src="' + chatimg + '"></div>'
-     +hasDonation+hasMembership
    +'</div>')
   .delay(10).queue(function(next){
     $( ".hl-c-cont" ).removeClass("fadeout");
@@ -87,7 +49,7 @@ $("body").on("click", ".btn-clear", function () {
   });
 });
 
-$( "yt-live-chat-app" ).before( '<highlight-chat></highlight-chat><button class="btn-clear">' + chrome.i18n.getMessage('CLEAR') + '</button>' );
+$(".jss284").before( '<highlight-chat></highlight-chat><button class="btn-clear">CLEAR</button>' );
 
 // Show a placeholder message so you can position the window before the chat is live
 $(function(){
@@ -99,7 +61,7 @@ $(function(){
   } catch(e) {
     var chatimg = browser.runtime.getURL(chatimglocal);
   }
-  $( "highlight-chat" ).addClass("preview").append('<div class="hl-c-cont fadeout"><div class="hl-name">' + chatuser + '<div class="hl-badges"></div></div><div class="hl-message">' + chatmessage + '</div><div class="hl-img"><img src="' + chatimg + '"></div></div>')
+  $(".jss228").addClass("preview").append('<div class="hl-c-cont fadeout"><div class="hl-name">' + chatuser + '</div><div class="hl-message">' + chatmessage + '</div><div class="hl-img"><img src="' + chatimg + '"></div></div>')
   .delay(10).queue(function(next){
     $( ".hl-c-cont" ).removeClass("fadeout");
     next();
@@ -154,7 +116,7 @@ chrome.storage.sync.get(properties, function(item){
 });
 
 
-$("#primary-content").append('<span style="font-size: 0.7em">Aspect Ratio: <span id="aspect-ratio"></span></span>');
+$(".jss416").append('<span style="font-size: 0.7em">Aspect Ratio: <span id="aspect-ratio"></span></span>');
 
 function displayAspectRatio() {
   var ratio = Math.round(window.innerWidth / window.innerHeight * 100) / 100;
@@ -188,11 +150,10 @@ function onElementInserted(containerSelector, tagName, callback) {
 
 }
 
-
-onElementInserted(".yt-live-chat-item-list-renderer#items", "yt-live-chat-text-message-renderer", function(element){
+onElementInserted(".jss229", ".jss463", function(element){
   console.log("New dom element inserted", element.tagName);
   // Check for highlight words
-  var chattext = $(element).find("#message").text();
+  var chattext = $(element).find("jss231").text();
   var chatWords = chattext.split(" ");
   var highlights = chatWords.filter(value => highlightWords.includes(value.toLowerCase().replace(/[^a-z0-9]/gi, '')));
   $(element).removeClass("shown-comment");
@@ -200,4 +161,3 @@ onElementInserted(".yt-live-chat-item-list-renderer#items", "yt-live-chat-text-m
     $(element).addClass("highlighted-comment");
   }
 });
-

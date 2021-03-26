@@ -1,0 +1,84 @@
+{
+  "extName": {
+    "message": "Nakładka na Live Chat",
+    "description": "Nazwa rozszerzenia"
+  },
+  "extDesc": {
+    "message": "Zmodyfikuj okienko chatu YouTube/Restream do formy która może być wyświetlana w audycjach LIVE",
+    "description": "Opis rozszerzenia"
+  },
+  "default_chat_user": {
+    "message": "Przykładowy Uczestnik",
+    "description": "example message author when overlay starts"
+  },
+  "default_chat_msg": {
+    "message": "ten live totalnie wymiata!",
+    "description": "przykładowa linijka chatu przy starcie"
+  },
+  "settings_lecture": {
+    "message": "<p>Możesz modyfikować kolorystykę nakładki. Wprowadź <a target=\"_blank\" href=\"https://www.google.com/search?q=hex+color+picker\">kody kolorów</a> jakich chcesz użyć. Pamiętaj, że całkowicie czarny #000 zostanie zmieniony na przezroczystość. Jeśli pozostawisz pole puste, wartość zostanie zresetowana do domyślnej.</p><ul><li>Czarny: #000</li><li>Ciemny szary: #222</li><li>Biały: #fff</li></ul>",
+    "description": "instructions on how to setup extension"
+  },
+  "settings_words": {
+    "message": "Podświetl słowa"
+  },
+  "settings_words_desc": {
+    "message": "Wprowadź listę słów oddzielonych przecinkiem, a komentarze je zawierające zostaną podświetlone"
+  },
+  "settings_bgcolor": {
+    "message": "Kolor tła"
+  },
+  "settings_fgauthor": {
+    "message": "Kolor tekstu podpisu autora"
+  },
+  "settings_bgauthor": {
+    "message": "Kolor tła podpisu autora"
+  },
+  "settings_border": {
+    "message": "Kolor ramki awatara autora"
+  },
+  "settings_bgchat": {
+    "message": "Kolor tła komentarza"
+  },
+  "settings_fgchat": {
+    "message": "Kolor tekstu komentarza"
+  },
+  "settings_firstname": {
+    "message": "Pokazuj tylko imiona"
+  },
+  "settings_font": {
+    "message": "Czcionka"
+  },
+  "settings_advanced": {
+    "message": "Zmień poniższe parametry aby zmodyfikować pole komentarza, np. żeby zmieścić dłuższe komentarze. Przepraszam, że to takie nieintuicyjne."
+  },
+  "settings_scale": {
+    "message": "Skala aktywnego komentarza (np. 0.8)"
+  },
+  "settings_bottom": {
+    "message": "Dolna pozycja aktywnego komentarza"
+  },
+  "settings_bottom_desc": {
+    "message": "(ustaw na liczbę ujemną aby przesunąć w dół kiedy okno jest skalowane, np. -2vh)"
+  },
+  "settings_height": {
+    "message": "Wysokość aktywnego komentarza (domyślnie 30vh)"
+  },
+  "settings_width": {
+    "message": "Ofset szerokości"
+  },
+  "settings_width_desc": {
+    "message": "(pole tekstowe będzie szersze kiedy okno jest skalowane, np. 100)"
+  },
+  "settings_save": {
+    "message": "Zapisz"
+  },
+  "CLEAR": {
+    "message": "SCHOWAJ"
+  },
+  "new_member": {
+    "message": "NOWY WSPIERAJĄCY!"
+  }
+}
+
+

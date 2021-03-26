@@ -1,20 +1,28 @@
 {
-  "name": "Live Chat Overlay",
-  "description": "Restyle the YouTube popout chat so you can overlay it for livestreams",
+  "name": "__MSG_extName__",
+  "description": "__MSG_extDesc__",
   "manifest_version": 2,
-  "version": "0.1.9",
+  "version": "0.1.9.1",
   "homepage_url": "https://github.com/aaronpk/YouTube-Chat-Overlay",
+  "default_locale": "en",
+  "web_accessible_resources": ["img/*.png"],
   "icons": {
     "128": "icons/icon-128.png"
   },
   "permissions": [
-    "https://youtube.com/*", "https://www.youtube.com/*", "https://studio.youtube.com/*", "storage"
+    "https://youtube.com/*", "https://www.youtube.com/*", "https://studio.youtube.com/*", "https://chat.restream.io/*", "storage"
   ],
   "content_scripts": [{
-    "css": ["youtube.css"],
+    "css": ["common.css"],
     "js": ["jquery.js", "youtube.js"],
     "matches": ["https://youtube.com/live_chat*", "https://www.youtube.com/live_chat*", "https://studio.youtube.com/live_chat*"]
-  }],
+  },
+  {
+    "css": ["common.css"],
+    "js": ["jquery.js", "jquery.waituntilexists.js", "restream.js"],
+    "matches": ["https://chat.restream.io/*"]
+  }
+  ],
   "options_ui": {
     "page": "settings/options.html"
   },

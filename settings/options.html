@@ -37,83 +37,78 @@
 </head>
 <body>
 
-  <p>Customize the colors of the live chat overlay. Enter the <a href="https://www.google.com/search?q=hex+color+picker">hex codes</a> of the colors you'd like to use. Remember that full black #000 will be keyed out. You can delete a value to reset it to the default.</p>
-  <ul>
-    <li>Black: #000</li>
-    <li>Dark Grey: #222</li>
-    <li>White: #fff</li>
-  </ul>
+  __MSG_settings_lecture__
 
   <form>
     <div class="section">
       <div class="setting">
-        <label>Highlight Words</label>
-        <div>Enter a list of comma-separated words that will be highlighted in the chat</div>
+        <label>__MSG_settings_words__</label>
+        <div>__MSG_settings_words_desc__</div>
         <input type="text" class="text" id="highlight-words">
       </div>
     </div>
     <div class="section">
       <div class="setting">
-        <label>Background Color</label>
+        <label>__MSG_settings_bgcolor__</label>
         <input type="text" class="text" id="color">
       </div>
     </div>
     <div class="section">
       <div class="setting">
-        <label>Author Name Color</label>
+        <label>__MSG_settings_fgauthor__</label>
         <input type="text" class="text" id="author-color">
       </div>
       <div class="setting">
-        <label>Author Background Color</label>
+        <label>__MSG_settings_bgauthor__</label>
         <input type="text" class="text" id="author-bg-color">
       </div>
       <div class="setting">
-        <label>Author Avatar Border Color</label>
+        <label>__MSG_settings_border__</label>
         <input type="text" class="text" id="author-avatar-border-color">
       </div>
     </div>
     <div class="section">
       <div class="setting">
-        <label>Chat Message Background Color</label>
+        <label>__MSG_settings_bgchat__</label>
         <input type="text" class="text" id="comment-bg-color">
       </div>
       <div class="setting">
-        <label>Chat Message Text Color</label>
+        <label>__MSG_settings_fgchat__</label>
         <input type="text" class="text" id="comment-color">
       </div>
     </div>
     <div class="section">
       <div class="setting" style="margin-bottom: 10px;">
         <input type="checkbox" class="checkbox" id="firstname">
-        <label>Show only first name</label>
+        <label>__MSG_settings_firstname__</label>
       </div>
       <div class="setting">
-        <label>Font</label>
+        <label>__MSG_settings_font__</label>
         <input type="text" class="text" id="font-family">
       </div>
     </div>
     <div class="section">
-      <p><i>Adjust these to make the comment text smaller or fit more lines of text. Sorry it's kind of hard to use.</i></p>
+      <p><i>__MSG_settings_advanced__</i></p>
       <div class="setting">
-        <label>Active Comment Scale (e.g. 0.8)</label>
+        <label>__MSG_settings_scale__</label>
         <input type="text" class="text" id="scale">
       </div>
       <div class="setting">
-        <label>Active Comment Bottom Position</label>
-        <div>(set negative to move lower when scaled down, e.g. -2vh)</div>
+        <label>__MSG_settings_bottom__</label>
+        <div>__MSG_settings_bottom_desc__</div>
         <input type="text" class="text" id="comment-bottom">
       </div>
       <div class="setting">
-        <label>Active Comment Height (default 30vh)</label>
+        <label>__MSG_settings_height__</label>
         <input type="text" class="text" id="comment-height">
       </div>
       <div class="setting">
-        <label>Width Offset</label>
-        <div>(make text area wider when scaled down, e.g. 100)</div>
+        <label>__MSG_settings_width__</label>
+        <div>__MSG_settings_width_desc__</div>
         <input type="text" class="text" id="size-offset">
       </div>
     </div>
-    <button type="submit">Save</button>
+    <button type="submit">__MSG_settings_save__</button>
   </form>
 
   <script src="options.js"></script>
